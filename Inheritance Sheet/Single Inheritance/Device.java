@@ -1,0 +1,31 @@
+package SingleInheritance;
+
+public class Device {
+    String deviceId;
+    String status;
+
+    Device(String deviceId, String status) {
+        this.deviceId = deviceId;
+        this.status = status;
+    }
+
+    void displayStatus() {
+        System.out.println("Device ID: " + deviceId + ", Status: " + status);
+    }
+}
+
+class Thermostat extends Device {
+    int temperatureSetting;
+
+    Thermostat(String deviceId, String status, int temperatureSetting) {
+        super(deviceId, status);
+        this.temperatureSetting = temperatureSetting;
+    }
+
+    void displayStatus() {
+        System.out.println("Thermostat - Device ID: " + deviceId + ", Status: " + status + ", Temperature: " + temperatureSetting + "°C");
+    }
+}
+
+
+
